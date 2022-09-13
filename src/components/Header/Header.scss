@@ -8,11 +8,11 @@
   grid-template-columns: 10% 85% 5%;
   align-items: center;
 
-  @media screen and (max-width: ($WidthContainer + 40px)) {
+  @media screen and (max-width: ($WidthContainer + 50px)) {
     grid-template-columns: 15% 78% 7%;
   }
 
-  @media screen and (max-width: 1030px) {
+  @media screen and (max-width: 1045px) {
     grid-template-columns: 80% 10% 10%;
     padding: 0 20px;
   }
@@ -28,11 +28,11 @@
     cursor: pointer;
     user-select: none;
 
-    @media screen and (max-width: ($WidthContainer + 40px)) {
+    @media screen and (max-width: ($WidthContainer + 50px)) {
       justify-self: center;
     }
 
-    @media screen and (max-width: 1030px) {
+    @media screen and (max-width: 1045px) {
       justify-self: start;
     }
   }
@@ -41,11 +41,11 @@
     display: flex;
     justify-content: flex-end;
 
-    @media screen and (max-width: ($WidthContainer + 40px)) {
+    @media screen and (max-width: ($WidthContainer + 50px)) {
       justify-content: center;
     }
 
-    @media screen and (max-width: 1030px) {
+    @media screen and (max-width: 1045px) {
       display: none;
     }
   }
@@ -63,7 +63,7 @@
   }
 
   &__item-menu {
-    @media screen and (max-width: ($WidthContainer + 40px)) {
+    @media screen and (max-width: ($WidthContainer + 50px)) {
       padding: 0 10px;
     }
   }

@@ -13,7 +13,7 @@
 .app-container {
   width: $WidthContainer;
 
-  @media screen and (max-width: ($WidthContainer + 40px)) {
+  @media screen and (max-width: ($WidthContainer + 50px)) {
     margin: 0 20px;
     width: 100%;
   }

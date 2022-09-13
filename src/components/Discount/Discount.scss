@@ -7,6 +7,15 @@
   width: $WidthContainer;
   color: #000;
   position: relative;
+  box-sizing: border-box;
+
+  @media screen and (max-width: ($WidthContainer + 50px)) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 890px) {
+    padding: 0 20px;
+  }
 
   &__title,
   &__title_accentuated {
@@ -17,6 +26,16 @@
     line-height: 57px;
     color: #fff;
     text-align: center;
+
+    @media screen and (max-width: 775px) {
+      font-size: 40px;
+      line-height: 49px;
+    }
+
+    @media screen and (max-width: 650px) {
+      font-size: 30px;
+      line-height: 39px;
+    }
   }
 
   &__title_accentuated {
@@ -28,6 +47,10 @@
     align-items: center;
     margin: 85px 0 50px;
     font-weight: 400;
+
+    @media screen and (max-width: 890px) {
+      margin: 55px 0 45px;
+    }
   }
 
   &__price-before {
@@ -48,6 +71,11 @@
   &__details {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
+    @media screen and (max-width: 890px) {
+      grid-template-columns: 1fr;
+      row-gap: 50px;
+    }
   }
 
   &__button {

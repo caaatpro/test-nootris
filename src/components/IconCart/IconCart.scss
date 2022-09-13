@@ -11,7 +11,7 @@
   cursor: pointer;
   user-select: none;
 
-  @media screen and (max-width: ($WidthContainer + 40px)) {
+  @media screen and (max-width: ($WidthContainer + 50px)) {
     justify-self: center;
   }
 

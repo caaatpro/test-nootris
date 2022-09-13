@@ -8,6 +8,11 @@
   &__image {
     margin-bottom: 45px;
     user-select: none;
+    max-width: 100%;
+
+    @media screen and (max-width: 890px) {
+      margin-bottom: 15px;
+    }
   }
 
   &__text {

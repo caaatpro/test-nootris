@@ -32,8 +32,8 @@ const Header = ({ logo, menu, countInCart }: IFHeader) => {
       <Media
         queries={{
           small: 'screen and (max-width: 599px)',
-          medium: 'screen and (min-width: 600px) and (max-width: 1030px)',
-          large: 'screen and (min-width: 1031px)',
+          medium: 'screen and (min-width: 600px) and (max-width: 1045px)',
+          large: 'screen and (min-width: 1046px)',
         }}
       >
         {(matches) => (

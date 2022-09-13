@@ -16,7 +16,9 @@ function App() {
           <Header logo={logo} menu={menu} countInCart={countInCart} />
         </div>
         <Banner {...banner} />
-        <Discount />
+        <div className="app-container">
+          <Discount />
+        </div>
 
         <Routes>{/* <Route path="/" element={<Main />} /> */}</Routes>
 
