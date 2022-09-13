@@ -1,0 +1,27 @@
+.icon-cart {
+  width: 32px;
+  height: 28px;
+  background-image: url('./img/cart.svg');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  justify-self: end;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+
+  &__counter {
+    width: 16px;
+    height: 16px;
+    background-color: #fcb500;
+    border-radius: 50%;
+    position: absolute;
+    right: -7px;
+    bottom: -7px;
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
