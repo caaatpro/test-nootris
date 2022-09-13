@@ -14,6 +14,10 @@
     width: $WidthContainer;
     color: #000;
     position: relative;
+
+    @media screen and (max-width: ($WidthContainer + 40px)) {
+      padding: 0 20px;
+    }
   }
 
   &__title {
@@ -56,5 +60,9 @@
     right: -85px;
     user-select: none;
     pointer-events: none;
+
+    @media screen and (max-width: 1480px) {
+      right: 0;
+    }
   }
 }

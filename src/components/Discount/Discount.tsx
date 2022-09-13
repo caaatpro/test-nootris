@@ -18,7 +18,7 @@ const Discount = () => {
       </p>
 
       <div className="discount__details">
-        {discountProductFeatures.map((item, i) => (i < 3 ? <ProductFeature {...item} /> : null))}
+        {discountProductFeatures.map((item, i) => (i < 3 ? <ProductFeature {...item} key={i} /> : null))}
       </div>
 
       <div className="discount__button">

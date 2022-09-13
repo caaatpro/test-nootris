@@ -1,3 +1,5 @@
+@import '../../global/styles-vars.scss';
+
 .icon-cart {
   width: 32px;
   height: 28px;
@@ -8,6 +10,10 @@
   position: relative;
   cursor: pointer;
   user-select: none;
+
+  @media screen and (max-width: ($WidthContainer + 40px)) {
+    justify-self: center;
+  }
 
   &__counter {
     width: 16px;

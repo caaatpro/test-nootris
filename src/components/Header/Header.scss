@@ -1,3 +1,5 @@
+@import '../../global/styles-vars.scss';
+
 .header {
   height: 80px;
   padding: 23px 0;
@@ -6,19 +8,50 @@
   grid-template-columns: 10% 85% 5%;
   align-items: center;
 
+  @media screen and (max-width: ($WidthContainer + 40px)) {
+    grid-template-columns: 15% 78% 7%;
+  }
+
+  @media screen and (max-width: 1030px) {
+    grid-template-columns: 80% 10% 10%;
+    padding: 0 20px;
+  }
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 70% 20% 10%;
+    padding: 0 10px;
+  }
+
   &__logo {
     width: 120px;
     height: 35px;
     cursor: pointer;
     user-select: none;
+
+    @media screen and (max-width: ($WidthContainer + 40px)) {
+      justify-self: center;
+    }
+
+    @media screen and (max-width: 1030px) {
+      justify-self: start;
+    }
   }
 
   &__menu {
     display: flex;
     justify-content: flex-end;
+
+    @media screen and (max-width: ($WidthContainer + 40px)) {
+      justify-content: center;
+    }
+
+    @media screen and (max-width: 1030px) {
+      display: none;
+    }
   }
 
-  &__item-menu {
+  &__item-menu,
+  &__item-menu-mob {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
@@ -29,9 +62,66 @@
     }
   }
 
+  &__item-menu {
+    @media screen and (max-width: ($WidthContainer + 40px)) {
+      padding: 0 10px;
+    }
+  }
+
   &__item-menu_phone {
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  &__menu-mob-icon {
+    width: 25px;
+    height: 25px;
+    background-image: url('./img/menu.svg');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    justify-self: center;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__menu-mob {
+    width: 100%;
+    height: 100%;
+    background-color: #111111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  &__item-menu-mob {
+    margin: 5px 0 5px 20px;
+  }
+
+  &__item-menu-mob_phone {
+    margin-top: 30px;
+  }
+
+  &__closed-menu-mob {
+    width: 25px;
+    height: 25px;
+    background-image: url('./img/closed.svg');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0 20px;
+
+    &:hover {
+      opacity: 0.8;
     }
   }
 }

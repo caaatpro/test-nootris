@@ -1,26 +1,51 @@
-import React from 'react';
+import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Media from 'react-media';
 import { IFHeader } from './interfaces';
 import './Header.scss';
 
 import IconCart from '../IconCart/IconCart';
+import Menu from '../Menu/Menu';
+import MenuMob from '../MenuMob/MenuMob';
 
 const Header = ({ logo, menu, countInCart }: IFHeader) => {
+  const [showMobMenu, setShowMobMenu] = useState(false);
+
+  const mainMenu = (
+    <Fragment>
+      <Menu menu={menu} />
+      <IconCart count={countInCart} />
+    </Fragment>
+  );
+
+  const mobMenu = (
+    <Fragment>
+      <IconCart count={countInCart} />
+      <div className="header__menu-mob-icon" onClick={() => setShowMobMenu(true)}></div>
+    </Fragment>
+  );
+
   return (
     <header className="header">
       <img src={logo} className="header__logo" alt="logo" />
-      <menu className="header__menu">
-        {menu.map(({ link, text }, i) => (
-          <Link to={link} className="header__item-menu" key={i}>
-            {text}
-          </Link>
-        ))}
-        <a href="tel:+78006000990" className="header__item-menu header__item-menu_phone">
-          8 (800) 600-09-90
-        </a>
-      </menu>
 
-      <IconCart count={countInCart} />
+      <Media
+        queries={{
+          small: 'screen and (max-width: 599px)',
+          medium: 'screen and (min-width: 600px) and (max-width: 1030px)',
+          large: 'screen and (min-width: 1031px)',
+        }}
+      >
+        {(matches) => (
+          <Fragment>
+            {matches.small && mobMenu}
+            {matches.medium && mobMenu}
+            {matches.large && mainMenu}
+          </Fragment>
+        )}
+      </Media>
+
+      {showMobMenu ? <MenuMob menu={menu} closed={() => setShowMobMenu(false)} /> : null}
     </header>
   );
 };
