@@ -17,22 +17,22 @@ export const banner: IFBanner = {
   text: 'Всего пять секунд в день помогут укрепить иммунитет и повысить защитные силы организма',
   subTitle: 'NOOTRIS помогает',
   subText: 'Вашему организму во время пандемии и сезонных простуд',
-  image: require('../components/Banner/img/image-banner.svg').default,
+  image: require('../components/Banner/img/image-banner.png'),
 };
 
 export const discountProductFeatures: IFProductFeature[] = [
   {
-    image: require('../components/ProductFeature/img/ginger.svg').default,
+    image: require('../components/ProductFeature/img/ginger.png'),
     text: 'Содержит',
     textAccentuated: 'имбирь',
   },
   {
-    image: require('../components/ProductFeature/img/nootris.svg').default,
+    image: require('../components/ProductFeature/img/nootris.png'),
     text: '+ Бесплатная доставка',
     textAccentuated: 'Специальная цена',
   },
   {
-    image: require('../components/ProductFeature/img/virus.svg').default,
+    image: require('../components/ProductFeature/img/virus.png'),
     text: 'Нейтрализует',
     textAccentuated: 'вирусы',
   },
